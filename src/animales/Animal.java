@@ -1,36 +1,53 @@
 package animales;
 
 public class Animal {
-    protected void comer(){ //protected acceso solo a clases hija
+    /*protected void comer(){ //protected acceso solo a clases hija
         System.out.println("Comiendo");
     }
-
     protected void dormir(){
+
         System.out.println("Durmiendo");
+    }*/
+    protected void hacerSonido(){
+        System.out.println("El animal hace un sonido");
     }
+
 }
 
 class Perro extends Animal{
-    public void hacerSonido(){
-        System.out.println("Ladrar");
+
+    @Override
+    protected void hacerSonido(){
+        System.out.println("El perro dice : guaf");
     }
+
 
 }
 
+class Gato extends Animal{
+
+    @Override
+    protected void hacerSonido(){
+        System.out.println("El gato dice: miau");
+    }
+}
+
+
+
 class PruebaAnimal{
-    public static void main() {
-        System.out.println(" *** Ejemplo de Herencia ***");
-        System.out.println("Clase Padre, soy un Animal");
-        var animal1 = new Animal();
-        animal1.comer();
-        animal1.dormir();
-        //animal1.hacerSonido(), nmetood no existe en clase padre solo hija
-        System.out.println("\nClase Hija, soy un Perro");
-        var perro1 = new Perro();
-        perro1.hacerSonido();
-        perro1.comer();
-        perro1.dormir();
 
+    //Metodo polimorfico
+    static void imprimirSonido(Animal animal){
+        animal.hacerSonido();
 
+    }
+
+    static void main(String[] args) {
+
+        //Objeto de la clase padre (Animal)
+        //var animal = new Animal();
+        //var animal = new Perro();
+        var animal = new Gato();
+        imprimirSonido(animal);
     }
 }
