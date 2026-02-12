@@ -7,10 +7,10 @@ public class Main {
 
 
         var socio1 = new Socio("Arnold","Basica");
-        var socio2 = new Socio("Arnold","Basica");
-        var socio3 = new Socio("Arnold","Basica");
-        var socio4 = new Socio("Arnold","Basica");
-        var socio5 = new Socio("Arnold","Basica");
+        var socio2 = new Socio("Erick","Basica");
+        var socio3 = new Socio("Eduardo","Basica");
+        var socio4 = new Socio("Chile","Basica");
+        var socio5 = new Socio("Bryan","Basica");
 
 
         var clase1 = new ClaseGym("Yoga");
